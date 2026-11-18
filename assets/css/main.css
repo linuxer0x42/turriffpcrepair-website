@@ -17,6 +17,21 @@
   --radius:     18px;
   --font: "Lato", "Helvetica Neue", Arial, sans-serif;
   --check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B1628' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+  /* shared darkened motherboard backdrop for the navy sections */
+  --photo-bg: url("../img/mobo-bg-1600.jpg");
+  --photo-veil-x: linear-gradient(90deg,
+      rgba(7, 16, 29, 0.96) 0%,
+      rgba(7, 16, 29, 0.92) 38%,
+      rgba(7, 16, 29, 0.76) 66%,
+      rgba(7, 16, 29, 0.64) 100%);
+  --photo-veil-y: linear-gradient(180deg,
+      rgba(7, 16, 29, 0.86) 0%,
+      rgba(7, 16, 29, 0.30) 45%,
+      rgba(7, 16, 29, 0.82) 100%);
+}
+
+@media (min-width: 1500px) {
+  :root { --photo-bg: url("../img/mobo-bg-2400.jpg"); }
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -158,6 +173,9 @@ a { color: var(--accent-deep); }
   color: var(--white);
   padding: clamp(3.25rem, 8vw, 6.5rem) 0 clamp(3rem, 6vw, 5rem);
 }
+
+/* the cyan monitor mark would fight the photo, so mute it */
+.hero-photo .hero-mark { opacity: 0.32; }
 
 .hero .wrap { position: relative; z-index: 1; }
 
@@ -355,6 +373,21 @@ h1 span { color: var(--accent); }
   margin: 0;
   color: var(--muted);
   font-weight: 700;
+}
+
+/* ---------------------------------------------------------- photo bands --- */
+/* Every full-width section on the navy base (the heroes and the contact
+   band) carries the same motherboard backdrop. Two navy veils keep the photo
+   behind the copy; the horizontal one is densest on the text side and the
+   vertical one blends the top and bottom edges into the page. Header and
+   footer are deliberately left as flat navy. */
+.hero-photo,
+.contact-photo {
+  background-color: var(--navy-deep);
+  background-image: var(--photo-veil-x), var(--photo-veil-y), var(--photo-bg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* --------------------------------------------------------------- footer --- */

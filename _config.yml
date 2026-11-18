@@ -29,3 +29,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  # 4K source for the hero backdrop - the resized copies in assets/img are
+  # what the site actually serves, so keep the full-size original unpublished.
+  - assets/4k-mobo-wp.jpg

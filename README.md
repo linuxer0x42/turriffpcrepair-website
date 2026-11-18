@@ -57,7 +57,12 @@ from that value, and every contact link is a `mailto:` link.
 - Type is Lato (Google Fonts) at 400 / 700 / 900 — the same family used in the
   printed flyer.
 - The cyan tick badges and the monitor mark are CSS/inline SVG, so there are
-  no image files to manage.
+  no icon image files to manage.
+- The navy sections (both heroes and the contact band) share a darkened
+  motherboard backdrop behind layered navy gradients. The site serves
+  optimised copies in `assets/img/` (`mobo-bg-1600.jpg`,
+  `mobo-bg-2400.jpg`); the 4K original `assets/4k-mobo-wp.jpg` is kept in
+  the repo but excluded from the build. The header and footer stay flat navy.
 - Layout is mobile-first and fluid; nav links hide below 760 px, where the
   header keeps the tappable email button and the hero keeps its email button.
 
