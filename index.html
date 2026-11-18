@@ -1,0 +1,86 @@
+---
+layout: default
+title: Computer repair in Turriff
+description: >-
+  Turriff PC Repair fixes Windows problems, slow computers and hardware
+  upgrades for one flat rate of £30. Call or text 07354 452514.
+---
+
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">{{ site.area }}</p>
+
+    <h1>Just computer repair.<br><span>Done properly.</span></h1>
+
+    <p class="lead">
+      Windows reinstalls, speed-ups and any hardware upgrade &mdash;
+      one flat rate, no jargon.
+    </p>
+
+    <p class="actions">
+      <a class="btn btn-primary" href="tel:{{ site.phone_link }}">
+        Call {{ site.phone_display }}
+      </a>
+      <a class="btn btn-ghost" href="#repairs">What I fix</a>
+    </p>
+
+    <ul class="facts">
+      <li>{{ site.price }} flat rate per repair</li>
+      <li>{{ site.area }}</li>
+      <li>Call or text</li>
+    </ul>
+  </div>
+
+  <svg class="hero-mark" viewBox="0 0 100 86" fill="none" aria-hidden="true">
+    <rect x="4" y="4" width="92" height="58" rx="8"
+          stroke="#00AEEF" stroke-width="4"/>
+    <path d="M42 66v12M58 66v12" stroke="#00AEEF" stroke-width="4"/>
+    <rect x="20" y="78" width="60" height="8" rx="3.5" fill="#00AEEF"/>
+    <path d="M17 29.7h49" stroke="#00AEEF" stroke-width="3"/>
+    <path d="M17 43.6h28" stroke="#00AEEF" stroke-width="3"/>
+  </svg>
+</section>
+
+<section class="section" id="repairs">
+  <div class="wrap">
+    <p class="kicker kicker-dark">What I fix</p>
+    <h2>Repairs, and nothing else.</h2>
+    <p class="intro">
+      No sidelines, no call-centre, no upsell. Your computer, put right, for
+      one price you can see before you hand it over.
+    </p>
+
+    <ul class="cards">
+      {% for service in site.data.services %}
+      <li class="card">
+        <span class="tick" aria-hidden="true"></span>
+        <h3>{{ service.name }}</h3>
+        <p>{{ service.detail }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="price" id="price">
+  <div class="wrap price-inner">
+    <p class="price-amount">{{ site.price }}</p>
+
+    <div class="price-copy">
+      <p class="price-label">Flat rate</p>
+      <p class="price-note">One simple price per repair.</p>
+      <a class="btn btn-dark" href="tel:{{ site.phone_link }}">
+        Call or text {{ site.phone_display }}
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="kicker">Get in touch</p>
+    <h2>Need a repair?</h2>
+    <a class="phone" href="tel:{{ site.phone_link }}">{{ site.phone_display }}</a>
+    <p class="contact-note">Call or text &mdash; {{ site.area }}</p>
+  </div>
+</section>

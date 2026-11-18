@@ -1,0 +1,10 @@
+# Each entry becomes a card in the "What I fix" section.
+# Add or remove entries freely - the card grid reflows on its own.
+- name: Windows reinstalls
+  detail: A clean reinstall of Windows when the old install has given up.
+
+- name: Slow PC speed-ups
+  detail: Clearing out whatever is dragging the machine down.
+
+- name: Any upgrade
+  detail: RAM, SSD, CPU, GPU, motherboard and more.

@@ -1,0 +1,32 @@
+# ---------------------------------------------------------------------------
+# Turriff PC Repair - Jekyll configuration
+# Change business details here once and the whole site follows.
+# ---------------------------------------------------------------------------
+
+title: Turriff PC Repair
+tagline: Just computer repair. Done properly.
+description: >-
+  Computer repair in Turriff, Aberdeenshire. One flat rate of £30 per repair:
+  Windows reinstalls, speed-ups, and any hardware upgrade - RAM, SSD, CPU,
+  GPU, motherboard and more.
+
+# Set these when the site goes live, e.g. https://turriffpcrepair.co.uk
+# (baseurl stays empty for a domain root, use "/folder" for a project page)
+url: ""
+baseurl: ""
+
+# --- business details (used in the header, contact section and schema) ---
+phone_display: "07354 452514"
+phone_link: "+447354452514"
+area: "Turriff, Aberdeenshire"
+price: "£30"
+
+lang: en-GB
+timezone: Europe/London
+markdown: kramdown
+plugins: []
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
