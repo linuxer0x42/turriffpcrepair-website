@@ -16,8 +16,7 @@ url: ""
 baseurl: ""
 
 # --- business details (used in the header, contact section and schema) ---
-phone_display: "07354 452514"
-phone_link: "+447354452514"
+email: "turrapcrepair@gmail.com"
 area: "Turriff, Aberdeenshire"
 price: "£30"
 

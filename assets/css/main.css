@@ -140,14 +140,14 @@ a { color: var(--accent-deep); }
 }
 .btn:hover { transform: translateY(-1px); }
 
-.btn-call {
+.btn-email {
   background: var(--accent);
   color: var(--navy);
-  padding: 0.7rem 1.15rem;
-  font-size: 0.98rem;
+  padding: 0.6rem clamp(0.6rem, 2vw, 1.05rem);
+  font-size: clamp(0.72rem, 2.5vw, 0.95rem);
   white-space: nowrap;
 }
-.btn-call:hover { background: var(--white); }
+.btn-email:hover { background: var(--white); }
 
 /* ----------------------------------------------------------------- hero --- */
 
@@ -338,18 +338,18 @@ h1 span { color: var(--accent); }
   text-align: left;
 }
 
-.phone {
+.email {
   display: inline-block;
   margin: 0.5rem 0 1rem;
   color: var(--white);
-  font-size: clamp(2.1rem, 8vw, 4.4rem);
+  font-size: clamp(1.35rem, 5vw, 3.1rem);
   font-weight: 900;
-  line-height: 1.05;
+  line-height: 1.1;
   letter-spacing: -0.01em;
   text-decoration: none;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
-.phone:hover { color: var(--accent); }
+.email:hover { color: var(--accent); }
 
 .contact-note {
   margin: 0;

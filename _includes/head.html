@@ -31,7 +31,7 @@
     "@type": "LocalBusiness",
     "name": {{ site.title | jsonify }},
     "description": {{ site.description | strip_newlines | strip | jsonify }},
-    "telephone": {{ site.phone_link | jsonify }},
+    "email": {{ site.email | jsonify }},
     "priceRange": {{ site.price | jsonify }},
     "areaServed": {{ site.area | jsonify }},
     "url": {{ '/' | absolute_url | jsonify }}

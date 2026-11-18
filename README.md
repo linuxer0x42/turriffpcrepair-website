@@ -38,17 +38,17 @@ The finished HTML lands in `_site/` — upload that folder to any static host
 
 | What | File |
 |---|---|
-| Phone number, price, area, page title/description | `_config.yml` |
+| Email, price, area, page title/description | `_config.yml` |
 | The three repair cards | `_data/services.yml` |
 | Hero wording, section headings, contact block | `index.html` |
 | Colours, spacing, type sizes | `assets/css/main.css` (variables at the top) |
-| Header (brand lockup, nav, call button) | `_includes/header.html` |
+| Header (brand lockup, nav, email button) | `_includes/header.html` |
 | Footer | `_includes/footer.html` |
 | 404 page | `404.html` |
 
-The phone number lives in **one** place: `phone_display` (what people read)
-and `phone_link` (the `tel:` target) in `_config.yml`. Every button, link and
-the footer pull from those two values.
+The email address lives in **one** place: `email` in `_config.yml`. Every
+button, the header, the contact block, the footer and the structured data pull
+from that value, and every contact link is a `mailto:` link.
 
 ## Design notes
 
@@ -59,7 +59,7 @@ the footer pull from those two values.
 - The cyan tick badges and the monitor mark are CSS/inline SVG, so there are
   no image files to manage.
 - Layout is mobile-first and fluid; nav links hide below 760 px, where the
-  header keeps the tappable call button and the hero keeps its call buttons.
+  header keeps the tappable email button and the hero keeps its email button.
 
 ## Deploying
 
