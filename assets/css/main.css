@@ -36,7 +36,12 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+/* Anchor jumps must clear the 82px sticky header (78px bar + 4px top border),
+   otherwise section headings land underneath it. */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
 
 body {
   margin: 0;
