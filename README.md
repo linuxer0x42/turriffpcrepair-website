@@ -1,4 +1,4 @@
-# Turra PC Repair — website
+# Turriff PC Repair — website
 
 A one-page Jekyll site in the same style as the A5 flyer (navy, cyan, Lato).
 No theme gem, no plugins — just Jekyll 4.
