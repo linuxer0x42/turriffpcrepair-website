@@ -16,9 +16,16 @@ url: ""
 baseurl: ""
 
 # --- business details (used in the header, contact section and schema) ---
-email: "turrapcrepair@gmail.com"
+phone_display: "07354 452514"
+phone_link: "+447354452514"
 area: "Turriff, Aberdeenshire"
 price: "£30"
+
+# --- address (shown beside the opening times and in the schema) ---
+address:
+  street: "14 and a half Main Street"
+  locality: "Turriff"
+  postcode: "AB534AD"
 
 # --- opening times (listed on the contact section and in the schema) ---
 opening_days:

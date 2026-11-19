@@ -3,7 +3,7 @@ layout: default
 title: Computer repair in Turriff
 description: >-
   Turriff PC Repair fixes Windows problems, slow computers and hardware
-  upgrades for one flat rate of £30. Email turrapcrepair@gmail.com.
+  upgrades for one flat rate of £30. Call or text 07354 452514.
 ---
 
 <section class="hero hero-photo">
@@ -18,8 +18,8 @@ description: >-
     </p>
 
     <p class="actions">
-      <a class="btn btn-primary" href="mailto:{{ site.email }}">
-        Email {{ site.email }}
+      <a class="btn btn-primary" href="tel:{{ site.phone_link }}">
+        Call {{ site.phone_display }}
       </a>
       <a class="btn btn-ghost" href="#repairs">What I fix</a>
     </p>
@@ -68,8 +68,8 @@ description: >-
     <div class="price-copy">
       <p class="price-label">Flat rate</p>
       <p class="price-note">One simple price per repair.</p>
-      <a class="btn btn-dark" href="mailto:{{ site.email }}">
-        Email {{ site.email }}
+      <a class="btn btn-dark" href="tel:{{ site.phone_link }}">
+        Call {{ site.phone_display }}
       </a>
     </div>
   </div>
@@ -80,24 +80,35 @@ description: >-
     <p class="kicker">Get in touch</p>
     <h2>Need a repair?</h2>
 
-    <a class="email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+    <a class="phone" href="tel:{{ site.phone_link }}">{{ site.phone_display }}</a>
 
-    <div class="hours">
-      <h3>Opening times</h3>
-      <dl class="hours-list">
-        {% for day in site.opening_days %}
-        <div class="hours-row">
-          <dt>{{ day }}</dt>
-          <dd>{{ site.opening_hours }}</dd>
-        </div>
-        {% endfor %}
-        {% for day in site.opening_closed_days %}
-        <div class="hours-row hours-row-closed">
-          <dt>{{ day }}</dt>
-          <dd>Closed</dd>
-        </div>
-        {% endfor %}
-      </dl>
+    <div class="contact-details">
+      <div class="hours">
+        <h3>Opening times</h3>
+        <dl class="hours-list">
+          {% for day in site.opening_days %}
+          <div class="hours-row">
+            <dt>{{ day }}</dt>
+            <dd>{{ site.opening_hours }}</dd>
+          </div>
+          {% endfor %}
+          {% for day in site.opening_closed_days %}
+          <div class="hours-row hours-row-closed">
+            <dt>{{ day }}</dt>
+            <dd>Closed</dd>
+          </div>
+          {% endfor %}
+        </dl>
+      </div>
+
+      <div class="address-block">
+        <h3>Address</h3>
+        <address class="address-lines">
+          {{ site.address.street }}<br>
+          {{ site.address.locality }}<br>
+          {{ site.address.postcode }}
+        </address>
+      </div>
     </div>
 
   </div>

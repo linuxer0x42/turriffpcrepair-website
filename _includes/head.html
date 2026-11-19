@@ -31,9 +31,16 @@
     "@type": "LocalBusiness",
     "name": {{ site.title | jsonify }},
     "description": {{ site.description | strip_newlines | strip | jsonify }},
-    "email": {{ site.email | jsonify }},
+    "telephone": {{ site.phone_link | jsonify }},
     "priceRange": {{ site.price | jsonify }},
     "areaServed": {{ site.area | jsonify }},
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": {{ site.address.street | jsonify }},
+      "addressLocality": {{ site.address.locality | jsonify }},
+      "postalCode": {{ site.address.postcode | jsonify }},
+      "addressCountry": "GB"
+    },
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",

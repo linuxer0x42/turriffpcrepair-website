@@ -160,14 +160,14 @@ a { color: var(--accent-deep); }
 }
 .btn:hover { transform: translateY(-1px); }
 
-.btn-email {
+.btn-call {
   background: var(--accent);
   color: var(--navy);
-  padding: 0.6rem clamp(0.6rem, 2vw, 1.05rem);
-  font-size: clamp(0.72rem, 2.5vw, 0.95rem);
+  padding: 0.7rem 1.15rem;
+  font-size: 0.98rem;
   white-space: nowrap;
 }
-.btn-email:hover { background: var(--white); }
+.btn-call:hover { background: var(--white); }
 
 /* ----------------------------------------------------------------- hero --- */
 
@@ -361,7 +361,7 @@ h1 span { color: var(--accent); }
   text-align: left;
 }
 
-.email {
+.phone {
   display: inline-block;
   margin: 0.5rem 0 1rem;
   color: var(--white);
@@ -370,9 +370,9 @@ h1 span { color: var(--accent); }
   line-height: 1.1;
   letter-spacing: -0.01em;
   text-decoration: none;
-  overflow-wrap: anywhere;
+  white-space: nowrap;
 }
-.email:hover { color: var(--accent); }
+.phone:hover { color: var(--accent); }
 
 .contact-note {
   margin: 0;
@@ -380,16 +380,23 @@ h1 span { color: var(--accent); }
   font-weight: 700;
 }
 
-/* --------------------------------------------------------------- hours --- */
+/* --------------------------------------------------- hours and address --- */
 
-.hours {
-  margin-top: 2.75rem;
+.contact-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 2rem 3rem;
+  max-width: 42rem;
+  margin-top: 2rem;
   padding-top: 2rem;
-  max-width: 26rem;
   border-top: 1px solid rgba(255, 255, 255, 0.16);
 }
 
-.hours h3 {
+.hours,
+.address-block { min-width: 0; }
+
+.hours h3,
+.address-block h3 {
   margin: 0 0 1rem;
   font-size: 0.78rem;
   font-weight: 900;
@@ -427,6 +434,15 @@ h1 span { color: var(--accent); }
 }
 
 .hours-row-closed dd { opacity: 0.7; }
+
+.address-lines {
+  margin: 0;
+  color: var(--white);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
 
 /* ---------------------------------------------------------- photo bands --- */
 /* Every full-width section on the navy base (the heroes and the contact

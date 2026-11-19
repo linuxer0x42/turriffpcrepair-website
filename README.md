@@ -38,17 +38,22 @@ The finished HTML lands in `_site/` — upload that folder to any static host
 
 | What | File |
 |---|---|
-| Email, price, area, opening times, page title/description | `_config.yml` |
+| Phone number, address, price, area, opening times, page title/description | `_config.yml` |
 | The three repair cards | `_data/services.yml` |
 | Hero wording, section headings, contact block | `index.html` |
 | Colours, spacing, type sizes | `assets/css/main.css` (variables at the top) |
-| Header (brand lockup, nav, email button) | `_includes/header.html` |
+| Header (brand lockup, nav, call button) | `_includes/header.html` |
 | Footer | `_includes/footer.html` |
 | 404 page | `404.html` |
 
-The email address lives in **one** place: `email` in `_config.yml`. Every
-button, the header, the contact block, the footer and the structured data pull
-from that value, and every contact link is a `mailto:` link.
+The phone number lives in **one** place: `phone_display` (what people read)
+and `phone_link` (the `tel:` target) in `_config.yml`. Every button, the
+header, the contact block, the footer and the structured data pull from those
+values, and every contact link is a `tel:` link.
+
+The address is the `street`, `locality` and `postcode` values under `address`
+in the same file; the contact section lists them on separate lines beside the
+opening times and they feed the schema's `PostalAddress`.
 
 ## Design notes
 
@@ -64,7 +69,7 @@ from that value, and every contact link is a `mailto:` link.
   `mobo-bg-2400.jpg`); the 4K original `assets/4k-mobo-wp.jpg` is kept in
   the repo but excluded from the build. The header and footer stay flat navy.
 - Layout is mobile-first and fluid; nav links hide below 760 px, where the
-  header keeps the tappable email button and the hero keeps its email button.
+  header keeps the tappable call button and the hero keeps its call button.
 
 ## Deploying
 
