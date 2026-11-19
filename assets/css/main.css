@@ -352,6 +352,99 @@ h1 span { color: var(--accent); }
 .btn-dark { background: var(--navy); color: var(--white); }
 .btn-dark:hover { background: var(--white); color: var(--navy); }
 
+/* ------------------------------------------------------------- reviews --- */
+
+.reviews-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.1rem;
+  margin: 0 0 2rem;
+}
+
+.reviews-score {
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.reviews-summary-text {
+  margin: 0;
+  color: var(--soft);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.review-stars {
+  display: inline-flex;
+  gap: 0.12rem;
+  color: #D5DEE7;
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.star-on { color: #00B67A; }
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  min-width: 0;
+  padding: 1.5rem;
+  background: var(--tint);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.review h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+
+.review-body {
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+  color: var(--soft);
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+}
+
+.review .review-meta {
+  margin: auto 0 0;
+  padding-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.reviews-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 2rem 0 0;
+}
+
+.reviews-empty {
+  max-width: 46ch;
+  margin: 0;
+  color: var(--soft);
+  font-weight: 700;
+}
+
 /* -------------------------------------------------------------- contact --- */
 
 .contact {
@@ -502,9 +595,11 @@ h1 span { color: var(--accent); }
 }
 
 @media (max-width: 420px) {
-  /* only the hero's stacked buttons go full width - not the header CTA */
-  .actions { flex-direction: column; }
-  .actions .btn { width: 100%; text-align: center; }
+  /* only the stacked button groups go full width - not the header CTA */
+  .actions,
+  .reviews-actions { flex-direction: column; }
+  .actions .btn,
+  .reviews-actions .btn { width: 100%; text-align: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {

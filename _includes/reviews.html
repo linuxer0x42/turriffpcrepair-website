@@ -1,0 +1,80 @@
+{%- assign tp = site.data.trustpilot -%}
+{%- assign profile = tp.profile_url | default: site.trustpilot.profile_url -%}
+{%- assign profile = profile | strip -%}
+{%- assign review_url = site.trustpilot.review_url | strip -%}
+{%- if review_url == "" and profile contains "/review/" -%}
+{%- assign review_url = profile | replace: "/review/", "/evaluate/" -%}
+{%- endif -%}
+{%- if site.trustpilot.enabled -%}
+<section class="section reviews" id="reviews">
+  <div class="wrap">
+    <p class="kicker kicker-dark">Reviews</p>
+    <h2>What customers say.</h2>
+
+    {%- if tp.reviews and tp.reviews.size > 0 %}
+    <div class="reviews-summary">
+      {%- if tp.rating %}
+      <p class="reviews-score">{{ tp.rating }}</p>
+      {%- assign average = tp.rating | round -%}
+      <span class="review-stars" role="img"
+            aria-label="Rated {{ tp.rating }} out of 5 on Trustpilot">
+        {%- for i in (1..5) -%}
+        <span class="star{% if i <= average %} star-on{% endif %}" aria-hidden="true">★</span>
+        {%- endfor -%}
+      </span>
+      {%- endif %}
+      <p class="reviews-summary-text">
+        {%- if tp.count %}{{ tp.count }} reviews on {% endif %}Trustpilot
+      </p>
+    </div>
+
+    <ul class="reviews-grid">
+      {%- for review in tp.reviews %}
+      <li class="review">
+        <span class="review-stars" role="img"
+              aria-label="Rated {{ review.rating }} out of 5 on Trustpilot">
+          {%- for i in (1..5) -%}
+          <span class="star{% if i <= review.rating %} star-on{% endif %}" aria-hidden="true">★</span>
+          {%- endfor -%}
+        </span>
+        <h3>{{ review.title | escape }}</h3>
+        <p class="review-body">{{ review.text | escape }}</p>
+        <p class="review-meta">
+          {{- review.author | escape -}}
+          {%- if review.date %} &middot; {{ review.date }}{% endif -%}
+        </p>
+      </li>
+      {%- endfor %}
+    </ul>
+
+    {%- if profile != "" or review_url != "" %}
+    <p class="reviews-actions">
+      {%- if review_url != "" %}
+      <a class="btn btn-primary" href="{{ review_url }}"
+         target="_blank" rel="noopener noreferrer">Leave a review on Trustpilot</a>
+      {%- endif %}
+      {%- if profile != "" %}
+      <a class="btn btn-dark" href="{{ profile }}"
+         target="_blank" rel="noopener noreferrer">Read all reviews on Trustpilot</a>
+      {%- endif %}
+    </p>
+    {%- endif %}
+    {%- else %}
+    <p class="reviews-empty">
+      Customer reviews are collected on Trustpilot and will appear here shortly.
+      {%- if profile != "" %}
+      <a href="{{ profile }}" target="_blank"
+         rel="noopener noreferrer">See the Trustpilot profile</a>.
+      {%- endif %}
+    </p>
+
+    {%- if review_url != "" %}
+    <p class="reviews-actions">
+      <a class="btn btn-primary" href="{{ review_url }}"
+         target="_blank" rel="noopener noreferrer">Leave a review on Trustpilot</a>
+    </p>
+    {%- endif %}
+    {%- endif %}
+  </div>
+</section>
+{%- endif -%}
