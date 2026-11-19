@@ -20,6 +20,20 @@ email: "turrapcrepair@gmail.com"
 area: "Turriff, Aberdeenshire"
 price: "£30"
 
+# --- opening times (listed on the contact section and in the schema) ---
+opening_days:
+  - Monday
+  - Tuesday
+  - Wednesday
+  - Thursday
+  - Friday
+  - Saturday
+opening_hours: "9am – 5pm"   # shown next to each open day
+opening_opens: "09:00"       # used by the structured data
+opening_closes: "17:00"
+opening_closed_days:
+  - Sunday
+
 lang: en-GB
 timezone: Europe/London
 markdown: kramdown

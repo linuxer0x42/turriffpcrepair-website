@@ -82,5 +82,23 @@ description: >-
 
     <a class="email" href="mailto:{{ site.email }}">{{ site.email }}</a>
 
+    <div class="hours">
+      <h3>Opening times</h3>
+      <dl class="hours-list">
+        {% for day in site.opening_days %}
+        <div class="hours-row">
+          <dt>{{ day }}</dt>
+          <dd>{{ site.opening_hours }}</dd>
+        </div>
+        {% endfor %}
+        {% for day in site.opening_closed_days %}
+        <div class="hours-row hours-row-closed">
+          <dt>{{ day }}</dt>
+          <dd>Closed</dd>
+        </div>
+        {% endfor %}
+      </dl>
+    </div>
+
   </div>
 </section>

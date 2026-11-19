@@ -380,6 +380,54 @@ h1 span { color: var(--accent); }
   font-weight: 700;
 }
 
+/* --------------------------------------------------------------- hours --- */
+
+.hours {
+  margin-top: 2.75rem;
+  padding-top: 2rem;
+  max-width: 26rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.hours h3 {
+  margin: 0 0 1rem;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.hours-list { margin: 0; }
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hours-row:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.hours-row dt {
+  margin: 0;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.hours-row dd {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.hours-row-closed dd { opacity: 0.7; }
+
 /* ---------------------------------------------------------- photo bands --- */
 /* Every full-width section on the navy base (the heroes and the contact
    band) carries the same motherboard backdrop. Two navy veils keep the photo
