@@ -101,7 +101,20 @@ a { color: var(--accent-deep); }
   top: 0;
   z-index: 50;
   background: var(--navy);
-  border-top: 4px solid var(--accent);
+  /* 4px track; .scroll-progress fills it as the page scrolls */
+  border-top: 4px solid rgba(255, 255, 255, 0.16);
+}
+
+.scroll-progress {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  pointer-events: none;
 }
 
 .header-inner {

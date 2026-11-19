@@ -73,6 +73,9 @@ opening times and they feed the schema's `PostalAddress`.
   the repo but excluded from the build. The header and footer stay flat navy.
 - Layout is mobile-first and fluid; nav links hide below 760 px, where the
   header keeps the tappable call button and the hero keeps its call button.
+- The cyan strip across the top of the sticky header is a scroll progress
+  bar (`assets/js/scroll-progress.js`). It scales from 0 to full width as you
+  scroll the page; with JavaScript disabled it stays an empty track.
 
 ## Deploying
 
