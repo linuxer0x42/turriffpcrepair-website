@@ -40,21 +40,6 @@ opening_closes: "17:00"
 opening_closed_days:
   - Sunday
 
-# --- Trustpilot reviews (section after the price band) ---
-# Fill these in when the Trustpilot account is ready and reviews are rendered
-# as cards. They are fetched at build time, so the API key is never written to
-# the generated site. On CI, set TRUSTPILOT_API_KEY instead of committing it.
-trustpilot:
-  enabled: true             # false hides the section entirely
-  business_unit_id: ""      # Trustpilot business unit ID
-  api_key: ""               # Trustpilot API key (build time only)
-  profile_url: ""           # e.g. https://uk.trustpilot.com/review/example.co.uk
-  review_url: ""            # e.g. https://uk.trustpilot.com/evaluate/example.co.uk
-                            # blank = derived from profile_url by swapping
-                            # /review/ for /evaluate/
-  per_page: 6               # how many reviews to show (1-20)
-  cache_minutes: 360        # reuse the fetched copy for this long
-
 lang: en-GB
 timezone: Europe/London
 markdown: kramdown
