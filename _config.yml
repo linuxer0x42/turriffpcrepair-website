@@ -23,7 +23,7 @@ price: "£30"
 
 # --- address (shown beside the opening times and in the schema) ---
 address:
-  street: "14 and a half Main Street"
+  street: "14 and a half main street"
   locality: "Turriff"
   postcode: "AB534AD"
 
