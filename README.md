@@ -42,7 +42,7 @@ The finished HTML lands in `_site/` — upload that folder to any static host
 | The three repair cards | `_data/services.yml` |
 | Hero wording, section headings, contact block | `index.html` |
 | Colours, spacing, type sizes | `assets/css/main.css` (variables at the top) |
-| Header (brand lockup, nav, call button) | `_includes/header.html` |
+| Header (logo lockup, nav, call button) | `_includes/header.html` |
 | Footer | `_includes/footer.html` |
 | 404 page | `404.html` |
 
@@ -63,6 +63,9 @@ opening times and they feed the schema's `PostalAddress`.
   printed flyer.
 - The cyan tick badges and the monitor mark are CSS/inline SVG, so there are
   no icon image files to manage.
+- The header logo is a cropped, optimised copy of `profile-icon-1024.png`
+  (`assets/img/profile-icon-160.png`); the 505 KB original is kept in the
+  repo but excluded from the build.
 - The navy sections (both heroes and the contact band) share a darkened
   motherboard backdrop behind layered navy gradients. The site serves
   optimised copies in `assets/img/` (`mobo-bg-1600.jpg`,

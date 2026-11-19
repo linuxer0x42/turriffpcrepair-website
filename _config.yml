@@ -52,3 +52,7 @@ exclude:
   # 4K source for the hero backdrop - the resized copies in assets/img are
   # what the site actually serves, so keep the full-size original unpublished.
   - assets/4k-mobo-wp.jpg
+  # Header logo sources - the header uses the cropped copy in assets/img,
+  # so keep the full-size originals unpublished.
+  - profile-1024.png
+  - profile-icon-1024.png
