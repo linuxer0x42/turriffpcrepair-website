@@ -17,9 +17,7 @@ description: >-
     </p>
 
     <p class="actions">
-      <a class="btn btn-primary" href="tel:{{ site.phone_link }}">
-        Call {{ site.phone_display }}
-      </a>
+      <a class="btn btn-primary" href="#contact">Contact us</a>
       <a class="btn btn-ghost" href="#repairs">What I fix</a>
     </p>
 
@@ -66,9 +64,7 @@ description: >-
     <div class="price-copy">
       <p class="price-label">Flat rate</p>
       <p class="price-note">One simple price per repair.</p>
-      <a class="btn btn-dark" href="tel:{{ site.phone_link }}">
-        Call {{ site.phone_display }}
-      </a>
+      <a class="btn btn-dark" href="#contact">Contact us</a>
     </div>
   </div>
 </section>
@@ -79,6 +75,12 @@ description: >-
     <h2>Need a repair?</h2>
 
     <a class="phone" href="tel:{{ site.phone_link }}">{{ site.phone_display }}</a>
+
+    <p class="contact-links">
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      <a href="{{ site.facebook_url }}" target="_blank"
+         rel="noopener noreferrer">Facebook</a>
+    </p>
 
     <div class="contact-details">
       <div class="hours">

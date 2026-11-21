@@ -62,6 +62,10 @@ links to `facebook_url` in `_config.yml`; the email one is a `mailto:` for
 `email`. They shrink to 32 px on phones so they stay on one line with the
 lockup.
 
+The hero and price-band buttons both read "Contact us" and jump to `#contact`
+rather than dialling. The contact section repeats the email address and the
+Facebook page as smaller, muted links under the phone number.
+
 ## Design notes
 
 - Palette matches the flyer: navy `#0B1628`, cyan `#00AEEF`, deep cyan
