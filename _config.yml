@@ -12,7 +12,7 @@ description: >-
 
 # Set these when the site goes live, e.g. https://turriffpcrepair.co.uk
 # (baseurl stays empty for a domain root, use "/folder" for a project page)
-url: ""
+url: "https://turriffpcrepair.co.uk"
 baseurl: ""
 
 # --- business details (used in the header, contact section and schema) ---
