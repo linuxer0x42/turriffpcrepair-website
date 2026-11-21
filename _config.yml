@@ -18,6 +18,7 @@ baseurl: ""
 # --- business details (used in the header, contact section and schema) ---
 phone_display: "07354 452514"
 phone_link: "+447354452514"
+email: "turrapcrepair@gmail.com"
 facebook_url: "https://www.facebook.com/profile.php?id=61596559057705"
 price: "£30"
 

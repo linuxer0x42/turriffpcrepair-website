@@ -38,27 +38,29 @@ The finished HTML lands in `_site/` — upload that folder to any static host
 
 | What | File |
 |---|---|
-| Phone number, Facebook link, address, price, area, opening times, page title/description | `_config.yml` |
+| Phone number, email, Facebook link, address, price, area, opening times, page title/description | `_config.yml` |
 | The three repair cards | `_data/services.yml` |
 | Hero wording, section headings, contact block | `index.html` |
 | Colours, spacing, type sizes | `assets/css/main.css` (variables at the top) |
-| Header (logo lockup, nav, call button) | `_includes/header.html` |
+| Header (logo lockup, nav, contact icons) | `_includes/header.html` |
 | Footer | `_includes/footer.html` |
 | 404 page | `404.html` |
 
 The phone number lives in **one** place: `phone_display` (what people read)
-and `phone_link` (the `tel:` target) in `_config.yml`. Every button, the
-header, the contact block, the footer and the structured data pull from those
-values, and every contact link is a `tel:` link.
+and `phone_link` (the `tel:` target) in `_config.yml`. The email address lives
+in `email` in the same file. The header icons, the contact block, the footer
+and the structured data pull from those values; phone links are `tel:` and the
+email link is a `mailto:`.
 
 The address is the `street`, `locality` and `postcode` values under `address`
 in the same file; the contact section lists them on separate lines beside the
 opening times and they feed the schema's `PostalAddress`.
 
-The header's Facebook button links to `facebook_url` in `_config.yml`; replace
-the placeholder with your page address. It is an inline SVG "f" in the accent
-cyan (the call button's background colour) on a slightly lighter navy disc, and
-is hidden below 421 px where the header has no room for it.
+The header's three icon buttons (call, email and Facebook) share the same
+treatment: a circular accent-cyan disc with the glyph in navy. The Facebook one
+links to `facebook_url` in `_config.yml`; the email one is a `mailto:` for
+`email`. They shrink to 32 px on phones so they stay on one line with the
+lockup.
 
 ## Design notes
 
