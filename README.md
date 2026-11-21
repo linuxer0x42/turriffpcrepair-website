@@ -38,7 +38,7 @@ The finished HTML lands in `_site/` — upload that folder to any static host
 
 | What | File |
 |---|---|
-| Phone number, address, price, area, opening times, page title/description | `_config.yml` |
+| Phone number, Facebook link, address, price, area, opening times, page title/description | `_config.yml` |
 | The three repair cards | `_data/services.yml` |
 | Hero wording, section headings, contact block | `index.html` |
 | Colours, spacing, type sizes | `assets/css/main.css` (variables at the top) |
@@ -54,6 +54,11 @@ values, and every contact link is a `tel:` link.
 The address is the `street`, `locality` and `postcode` values under `address`
 in the same file; the contact section lists them on separate lines beside the
 opening times and they feed the schema's `PostalAddress`.
+
+The header's Facebook button links to `facebook_url` in `_config.yml`; replace
+the placeholder with your page address. It is an inline SVG "f" in the accent
+cyan (the call button's background colour) on a slightly lighter navy disc, and
+is hidden below 421 px where the header has no room for it.
 
 ## Design notes
 
