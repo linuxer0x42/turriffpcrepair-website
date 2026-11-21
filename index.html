@@ -74,13 +74,11 @@ description: >-
     <p class="kicker">Get in touch</p>
     <h2>Need a repair?</h2>
 
-    <a class="phone" href="tel:{{ site.phone_link }}">{{ site.phone_display }}</a>
-
-    <p class="contact-links">
-      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-      <a href="{{ site.facebook_url }}" target="_blank"
-         rel="noopener noreferrer">Facebook</a>
-    </p>
+    <ul class="contact-links">
+      <li><span class="contact-label">Phone:</span> <a href="tel:{{ site.phone_link }}">{{ site.phone_display }}</a></li>
+      <li><span class="contact-label">Email:</span> <a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+      <li><span class="contact-label">Facebook:</span> <a href="{{ site.facebook_url }}" target="_blank" rel="noopener noreferrer">Turriff PC Repair</a></li>
+    </ul>
 
     <div class="contact-details">
       <div class="hours">

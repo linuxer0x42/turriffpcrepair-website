@@ -63,8 +63,8 @@ links to `facebook_url` in `_config.yml`; the email one is a `mailto:` for
 lockup.
 
 The hero and price-band buttons both read "Contact us" and jump to `#contact`
-rather than dialling. The contact section repeats the email address and the
-Facebook page as smaller, muted links under the phone number.
+rather than dialling. The contact section lists Phone, Email and Facebook as
+three small labelled lines using the same quiet styling.
 
 ## Design notes
 
