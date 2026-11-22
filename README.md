@@ -38,7 +38,7 @@ The finished HTML lands in `_site/` — upload that folder to any static host
 
 | What | File |
 |---|---|
-| Phone number, email, Facebook link, address, price, area, opening times, page title/description | `_config.yml` |
+| Phone number, email, Facebook link, review link, address, price, area, opening times, page title/description | `_config.yml` |
 | The three repair cards | `_data/services.yml` |
 | Hero wording, section headings, contact block | `index.html` |
 | Colours, spacing, type sizes | `assets/css/main.css` (variables at the top) |
@@ -65,6 +65,9 @@ lockup.
 The hero and price-band buttons both read "Contact us" and jump to `#contact`
 rather than dialling. The contact section lists Phone, Email and Facebook as
 three small labelled lines using the same quiet styling.
+
+The reviews section after the price band has a "Review us" button that opens
+`review_url` in a new tab — currently the business's Google review link.
 
 ## Design notes
 
